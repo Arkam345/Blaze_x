@@ -253,7 +253,7 @@ img {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: url('https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=1920&h=1080&fit=crop') center/cover no-repeat;
+    background: url('../images/hero-bg.jpg') center/cover no-repeat;
     padding: 0 20px;
 }
 

@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
             fuel: 'Petrol',
             transmission: 'Automatic',
             badge: 'New',
-            image: 'https://images.unsplash.com/photo-1626668895804-e03c3b9c5f45?w=600&h=400&fit=crop',
+            image: 'images/car-supra.jpg',
             description: 'The Toyota Supra delivers thrilling performance with a turbocharged inline-six engine, sharp handling, and a head-turning design. A true sports car icon reborn.'
         },
         {
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
             fuel: 'Petrol',
             transmission: 'Automatic',
             badge: 'Premium',
-            image: 'https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=600&h=400&fit=crop',
+            image: 'images/car-gtr.jpg',
             description: 'The Nissan GT-R, also known as "Godzilla," offers extraordinary acceleration, advanced all-wheel drive, and race-bred technology for an unparalleled driving experience.'
         },
         {
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
             fuel: 'Petrol',
             transmission: 'Automatic',
             badge: 'Sport',
-            image: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=600&h=400&fit=crop',
+            image: 'images/car-m4.jpg',
             description: 'The BMW M4 combines luxury and power with its twin-turbo inline-six engine, adaptive suspension, and driver-focused cockpit for the ultimate sport sedan experience.'
         },
         {
@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
             fuel: 'Petrol',
             transmission: 'Automatic',
             badge: 'Luxury',
-            image: 'https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=600&h=400&fit=crop',
+            image: 'images/car-c63.jpg',
             description: 'The Mercedes-Benz C63 AMG delivers raw power wrapped in luxury. Its handcrafted engine, aggressive styling, and premium interior make every drive extraordinary.'
         },
         {
@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
             fuel: 'Petrol',
             transmission: 'Automatic',
             badge: 'Quattro',
-            image: 'https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=600&h=400&fit=crop',
+            image: 'images/car-rs5.jpg',
             description: 'The Audi RS5 features a potent twin-turbo V6, the legendary Quattro all-wheel drive system, and a sophisticated interior that blends performance with elegance.'
         },
         {
@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
             fuel: 'Petrol',
             transmission: 'Manual',
             badge: 'Classic',
-            image: 'https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=600&h=400&fit=crop',
+            image: 'images/car-mustang.jpg',
             description: 'The Ford Mustang GT embodies American muscle with its roaring V8 engine, iconic design, and modern technology. A legend that continues to inspire.'
         }
     ];
