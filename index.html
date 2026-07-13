@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blaze_X Car Shop - Quality new and used vehicles at affordable prices with trusted customer service.">
+    <meta name="keywords" content="cars, dealership, new cars, used cars, Blaze_X, vehicle sales">
+    <meta name="author" content="Blaze_X Car Shop">
+    <title>Blaze_X Car Shop | Drive Your Dream Car Today</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- ======================== NAVIGATION ======================== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                <span class="logo-blaze">Blaze</span><span class="logo-x">_X</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#cars" class="nav-link">Cars</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ======================== HERO SECTION ======================== -->
+    <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title animate-on-scroll">Drive Your Dream Car Today</h1>
+            <p class="hero-subtitle animate-on-scroll">Blaze_X Car Shop offers quality new and used vehicles at affordable prices with trusted customer service.</p>
+            <div class="hero-buttons animate-on-scroll">
+                <a href="#cars" class="btn btn-primary">View Cars</a>
+                <a href="#contact" class="btn btn-secondary">Contact Us</a>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- ======================== FEATURED CARS ======================== -->
+    <section class="section cars-section" id="cars">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Featured Cars</h2>
+            <p class="section-subtitle animate-on-scroll">Explore our handpicked selection of premium vehicles</p>
+
+            <!-- Search & Filters -->
+            <div class="cars-filters animate-on-scroll">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="carSearch" placeholder="Search cars by name..." aria-label="Search cars">
+                </div>
+                <div class="filter-group">
+                    <select id="brandFilter" aria-label="Filter by brand">
+                        <option value="all">All Brands</option>
+                        <option value="toyota">Toyota</option>
+                        <option value="nissan">Nissan</option>
+                        <option value="bmw">BMW</option>
+                        <option value="mercedes">Mercedes-Benz</option>
+                        <option value="audi">Audi</option>
+                        <option value="ford">Ford</option>
+                    </select>
+                    <select id="priceFilter" aria-label="Filter by price">
+                        <option value="all">All Prices</option>
+                        <option value="0-50000">Under $50,000</option>
+                        <option value="50000-80000">$50,000 - $80,000</option>
+                        <option value="80000-120000">$80,000 - $120,000</option>
+                        <option value="120000-999999">$120,000+</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Cars Grid -->
+            <div class="cars-grid" id="carsGrid">
+                <!-- Car cards are dynamically inserted by JavaScript -->
+            </div>
+            <p class="no-results" id="noResults" style="display:none;">No cars match your search criteria.</p>
+        </div>
+    </section>
+
+    <!-- ======================== CAR GALLERY MODAL ======================== -->
+    <div class="modal-overlay" id="carModal">
+        <div class="modal">
+            <button class="modal-close" id="modalClose" aria-label="Close modal">&times;</button>
+            <div class="modal-content">
+                <div class="modal-image">
+                    <img id="modalImage" src="" alt="">
+                </div>
+                <div class="modal-details">
+                    <h3 id="modalTitle"></h3>
+                    <div class="modal-specs">
+                        <span><i class="fas fa-calendar-alt"></i> <span id="modalYear"></span></span>
+                        <span><i class="fas fa-gas-pump"></i> <span id="modalFuel"></span></span>
+                        <span><i class="fas fa-cogs"></i> <span id="modalTransmission"></span></span>
+                    </div>
+                    <p class="modal-price" id="modalPrice"></p>
+                    <p class="modal-description" id="modalDescription"></p>
+                    <a href="#contact" class="btn btn-primary" id="modalContactBtn">Inquire Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ======================== SERVICES ======================== -->
+    <section class="section services-section" id="services">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Our Services</h2>
+            <p class="section-subtitle animate-on-scroll">Comprehensive automotive solutions for every need</p>
+            <div class="services-grid">
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon"><i class="fas fa-car"></i></div>
+                    <h3>Buy Cars</h3>
+                    <p>Browse our extensive inventory of new and certified pre-owned vehicles.</p>
+                </div>
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon"><i class="fas fa-tag"></i></div>
+                    <h3>Sell Cars</h3>
+                    <p>Get the best value for your vehicle with our hassle-free selling process.</p>
+                </div>
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon"><i class="fas fa-file-invoice-dollar"></i></div>
+                    <h3>Car Financing</h3>
+                    <p>Affordable financing options tailored to your budget and credit profile.</p>
+                </div>
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon"><i class="fas fa-clipboard-check"></i></div>
+                    <h3>Vehicle Inspection</h3>
+                    <p>Comprehensive multi-point inspections to ensure top vehicle quality.</p>
+                </div>
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Insurance Support</h3>
+                    <p>Expert guidance to find the right insurance coverage for your vehicle.</p>
+                </div>
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon"><i class="fas fa-wrench"></i></div>
+                    <h3>Maintenance Services</h3>
+                    <p>Professional maintenance and repair services to keep your car running smoothly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================== WHY CHOOSE US ======================== -->
+    <section class="section why-section" id="why">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Why Choose Blaze_X?</h2>
+            <p class="section-subtitle animate-on-scroll">We go the extra mile so you drive with confidence</p>
+            <div class="why-grid">
+                <div class="why-card animate-on-scroll">
+                    <div class="why-icon"><i class="fas fa-award"></i></div>
+                    <h3>High-Quality Vehicles</h3>
+                    <p>Every vehicle undergoes rigorous quality checks before reaching our lot.</p>
+                </div>
+                <div class="why-card animate-on-scroll">
+                    <div class="why-icon"><i class="fas fa-dollar-sign"></i></div>
+                    <h3>Affordable Prices</h3>
+                    <p>Competitive pricing with no hidden fees — transparency you can trust.</p>
+                </div>
+                <div class="why-card animate-on-scroll">
+                    <div class="why-icon"><i class="fas fa-search"></i></div>
+                    <h3>Certified Inspections</h3>
+                    <p>Multi-point certified inspections on every vehicle we sell.</p>
+                </div>
+                <div class="why-card animate-on-scroll">
+                    <div class="why-icon"><i class="fas fa-hand-holding-usd"></i></div>
+                    <h3>Easy Financing</h3>
+                    <p>Flexible financing plans with quick approvals for all credit types.</p>
+                </div>
+                <div class="why-card animate-on-scroll">
+                    <div class="why-icon"><i class="fas fa-heart"></i></div>
+                    <h3>Trusted Customer Service</h3>
+                    <p>Our dedicated team is here to assist you at every step of the journey.</p>
+                </div>
+                <div class="why-card animate-on-scroll">
+                    <div class="why-icon"><i class="fas fa-bolt"></i></div>
+                    <h3>Fast Paperwork</h3>
+                    <p>Streamlined documentation process — get on the road faster.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================== CUSTOMER REVIEWS ======================== -->
+    <section class="section reviews-section" id="reviews">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Customer Reviews</h2>
+            <p class="section-subtitle animate-on-scroll">Hear from our satisfied customers</p>
+            <div class="reviews-grid">
+                <div class="review-card animate-on-scroll">
+                    <div class="review-header">
+                        <img src="https://i.pravatar.cc/100?img=11" alt="Ahmed Khan" class="review-avatar">
+                        <div>
+                            <h4>Ahmed Khan</h4>
+                            <div class="stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="review-text">"Excellent experience! Found my dream BMW M4 at an unbeatable price. The staff was professional and the paperwork was done in under an hour."</p>
+                </div>
+                <div class="review-card animate-on-scroll">
+                    <div class="review-header">
+                        <img src="https://i.pravatar.cc/100?img=32" alt="Sarah Mitchell" class="review-avatar">
+                        <div>
+                            <h4>Sarah Mitchell</h4>
+                            <div class="stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="review-text">"Blaze_X made buying my first car so easy. The financing options were flexible and the team was incredibly helpful throughout the entire process."</p>
+                </div>
+                <div class="review-card animate-on-scroll">
+                    <div class="review-header">
+                        <img src="https://i.pravatar.cc/100?img=53" alt="James Rodriguez" class="review-avatar">
+                        <div>
+                            <h4>James Rodriguez</h4>
+                            <div class="stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="review-text">"Sold my old car and upgraded to a Nissan GT-R in the same day! Transparent pricing and no hidden charges. Highly recommended!"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================== ABOUT US ======================== -->
+    <section class="section about-section" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text animate-on-scroll">
+                    <h2 class="section-title">About Us</h2>
+                    <p>Blaze_X Car Shop is dedicated to providing reliable, high-quality vehicles with transparent pricing and excellent customer support. Our goal is to help every customer find the perfect car with confidence.</p>
+                    <p>Founded with a passion for automobiles and customer satisfaction, we have grown to become one of the most trusted car dealerships in the region. Our team of experienced professionals is committed to delivering an exceptional buying experience from start to finish.</p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number" data-target="500">0</span><span class="stat-plus">+</span>
+                            <span class="stat-label">Cars Sold</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" data-target="450">0</span><span class="stat-plus">+</span>
+                            <span class="stat-label">Happy Customers</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" data-target="10">0</span><span class="stat-plus">+</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image animate-on-scroll">
+                    <img src="https://images.unsplash.com/photo-1562141961-b5f1e904014b?w=600&h=400&fit=crop" alt="Blaze_X Car Shop Showroom" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================== CONTACT ======================== -->
+    <section class="section contact-section" id="contact">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Contact Us</h2>
+            <p class="section-subtitle animate-on-scroll">Get in touch — we'd love to hear from you</p>
+            <div class="contact-wrapper">
+                <form class="contact-form animate-on-scroll" id="contactForm">
+                    <div class="form-group">
+                        <label for="contactName">Name</label>
+                        <input type="text" id="contactName" name="name" placeholder="Your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactEmail">Email</label>
+                        <input type="email" id="contactEmail" name="email" placeholder="your@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactPhone">Phone</label>
+                        <input type="tel" id="contactPhone" name="phone" placeholder="+1 (555) 123-4567">
+                    </div>
+                    <div class="form-group">
+                        <label for="contactMessage">Message</label>
+                        <textarea id="contactMessage" name="message" rows="5" placeholder="Tell us how we can help..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+                </form>
+                <div class="contact-info animate-on-scroll">
+                    <div class="info-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Address</h4>
+                            <p>123 Auto Boulevard, Downtown District<br>New York, NY 10001</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <h4>Phone Number</h4>
+                            <p>+1 (555) 987-6543</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email Address</h4>
+                            <p>info@blazexcarshop.com</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Business Hours</h4>
+                            <p>Mon - Fri: 9:00 AM - 7:00 PM<br>Sat: 10:00 AM - 5:00 PM<br>Sun: Closed</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================== FOOTER ======================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#home" class="logo">
+                        <span class="logo-blaze">Blaze</span><span class="logo-x">_X</span>
+                    </a>
+                    <p>Your trusted partner in finding the perfect vehicle. Quality cars, honest prices, exceptional service.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#cars">Cars</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Blaze_X Car Shop. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
